@@ -35,7 +35,7 @@
         <body>
           <style media="screen">
             * {
-              margin: 0;
+              margin:0;
               padding:0;
               -webkit-box-sizing:border-box;
               -moz-box-sizing:border-box;
@@ -87,31 +87,83 @@
           <div class="wrap">
             <div class="widget">
               <div class="fecha">
-                <p id="diaSemana" class="diaSemana">Martes</p>
-                <p id="dia" class="dia">4</p>
+                <p id="diaSemana" class="diaSemana"></p>
+                <p id="dia" class="dia"></p>
                 <p>de </p>
-                <p id="mes" class="mes">Noviembre</p>
+                <p id="mes" class="mes"></p>
                 <p>del</p>
-                <p id="year" class="year">2020</p>
+                <p id="year" class="year"></p>
               </div>
 
               <div class="reloj">
-                <p id="horas" class="horas">10</p>
+                <p id="horas" class="horas"></p>
                 <p>:</p>
-                <p id="minutos" class="minutos">3</p>
+                <p id="minutos" class="minutos"></p>
                 <p>:</p>
                 <div class="caja-segundos">
-                  <p id="ampm" class="ampm">AM</p>
-                  <p id="segundos" class="segundos">11</p>
+                  <p id="ampm" class="ampm"></p>
+                  <p id="segundos" class="segundos"></p>
                 </div>
               </div>
             </div>
           </div>
           <script type="text/javascript">
+            (function() {
+              var actualizarHora = function(){
+                var fecha = new Date(),
+                  horas = fecha.getHours(),
+                  ampm,
+                  minutos = fecha.getMinutes(),
+                  segundos = fecha.getSeconds(),
+                  DiaSemana = fecha.getDay(),
+                  dia = fecha.getDate(),
+                  mes = fecha.getMonth(),
+                  year = fecha.getFullYear();
 
+                var pHoras = document.getElementById('horas'),
+                    pAMPM = document.getElementById('ampm'),
+                    pMinutos = document.getElementById('minutos'),
+                    pSegundos = document.getElementById('segundos'),
+                    pDiaSemana = document.getElementById('diaSemana'),
+                    pDia = document.getElementById('dia'),
+                    pMes = document.getElementById('mes'),
+                    pYear = document.getElementById('year');
+
+                var semana = ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado'];
+                pDiaSemana.textContent = semana[diaSemana];
+                pDia.textContent = dia;
+                var meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+                pMes.textContent = meses[mes];
+                pYear.textContent = year;
+
+                if (horas >= 12) {
+                  horas = horas - 12;
+                  ampm = "PM";
+                } else {
+                  ampm = "AM"
+                }
+                if (horas==0) {
+                  horas = 12
+                };
+
+                pHoras.textContent = horas;
+                pAMPM.textContent = ampm;
+
+                if (minutos < 10) {minutos = "0" + minutos};
+                if (segundos < 10) {segundos = "0" + segundos};
+
+                pMinutos.textContent = minutos;
+                pSegundos.textContent = segundos;
+
+
+              };
+              actualizarHora();
+              var intervalo = setInterval(actualizarHora, 1000);
+            }())
           </script>
         </body>
       </html>
+
 
     </div>
     <br>
