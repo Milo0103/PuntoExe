@@ -6,7 +6,11 @@
     <link rel="icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Adobe_XD_CC_icon.svg/220px-Adobe_XD_CC_icon.svg.png">
   </head>
   <body style="text-align:center; background-color:#212F3D;">
-
+    <style media="screen">
+      .web-reloj{
+        align-items: center;
+      }
+    </style>
     <h2 style="color:white;">Bienvenidos a PuntoExe.com, aqui en adelante habra de todo,<br>
       Asi que porfavor mantega las manos dentro del carro.</h2>
 
@@ -23,95 +27,97 @@
     <button style="border-radius:0px 0px 15px 0px; padding:20;font-size:20px; border:none;width:233.33333px;height:50px"
     id="nepe3" onclick="window.open('https://www.youtube.com/watch?v=UIUaN2Ex06Y','_blank')">verlo</button>
     <br>
-    <!DOCTYPE html>
-    <html lang="en" dir="ltr">
-      <head>
-        <meta charset="utf-8">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&display=swap" rel="stylesheet">
-      </head>
-      <body>
-        <style media="screen">
-          * {
-            margin:0;
-            padding:0;
-            -webkit-box-sizing:border-box;
-            -moz-box-sizing:border-box;
-            box-sizing:border-box;
-            align-items: center;
-          }
-          body{
-            color: #fff;
-            font-size: 16px;
-          }
-          .wrap{
-            width: 90%;
-            max-width: 1000%;
-          }
-          .widget{
-            width: 40%;
-            margin: 2em;
-          }
-          .widget p{
-            display: inline-block;
-            line-height: 1em;
-          }
-          .fecha {
-            font-family: Oswald, Arial;
-            text-align: center;
-            font-size: 1.5em;
-            margin-bottom: 0.3125em;
-            background: rgba(0, 0, 0, 0.5);
-            padding: 20px;
-            width: 100%;
-          }
-          .reloj {
-            font-family: Oswald, Arial;
-            width: 100%;
-            padding: 20px;
-            font-size: 4em;
-            text-align: center;
-            background: rgba(0, 0, 0, 0.5);
-          }
-          .reloj .caja-segundos{
-            display: inline-block;
-          }
-          .reloj .segundos,
-          .reloj .ampm{
-            font-size: 2rem;
-            display: block;
-          }
+    <div class="web-reloj">
 
-        </style>
-        <div class="wrap">
-          <div class="widget">
-            <div class="fecha">
-              <p id="diaSemana" class="diaSemana">Martes</p>
-              <p id="dia" class="dia">4</p>
-              <p>de </p>
-              <p id="mes" class="mes">Noviembre</p>
-              <p>del</p>
-              <p id="year" class="year">2020</p>
-            </div>
+      <!DOCTYPE html>
+      <html lang="en" dir="ltr">
+        <head>
+          <meta charset="utf-8">
+          <link rel="preconnect" href="https://fonts.gstatic.com">
+          <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&display=swap" rel="stylesheet">
+        </head>
+        <body>
+          <style media="screen">
+            * {
+              margin:0;
+              padding:0;
+              -webkit-box-sizing:border-box;
+              -moz-box-sizing:border-box;
+              box-sizing:border-box;
+            }
+            body{
+              color: #fff;
+              font-size: 16px;
+            }
+            .wrap{
+              width: 90%;
+              max-width: 1000%;
+            }
+            .widget{
+              width: 40%;
+              margin: 2em;
+            }
+            .widget p{
+              display: inline-block;
+              line-height: 1em;
+            }
+            .fecha {
+              font-family: Oswald, Arial;
+              text-align: center;
+              font-size: 1.5em;
+              margin-bottom: 0.3125em;
+              background: rgba(0, 0, 0, 0.5);
+              padding: 20px;
+              width: 100%;
+            }
+            .reloj {
+              font-family: Oswald, Arial;
+              width: 100%;
+              padding: 20px;
+              font-size: 4em;
+              text-align: center;
+              background: rgba(0, 0, 0, 0.5);
+            }
+            .reloj .caja-segundos{
+              display: inline-block;
+            }
+            .reloj .segundos,
+            .reloj .ampm{
+              font-size: 2rem;
+              display: block;
+            }
 
-            <div class="reloj">
-              <p id="horas" class="horas">10</p>
-              <p>:</p>
-              <p id="minutos" class="minutos">3</p>
-              <p>:</p>
-              <div class="caja-segundos">
-                <p id="ampm" class="ampm">AM</p>
-                <p id="segundos" class="segundos">11</p>
+          </style>
+          <div class="wrap">
+            <div class="widget">
+              <div class="fecha">
+                <p id="diaSemana" class="diaSemana">Martes</p>
+                <p id="dia" class="dia">4</p>
+                <p>de </p>
+                <p id="mes" class="mes">Noviembre</p>
+                <p>del</p>
+                <p id="year" class="year">2020</p>
+              </div>
+
+              <div class="reloj">
+                <p id="horas" class="horas">10</p>
+                <p>:</p>
+                <p id="minutos" class="minutos">3</p>
+                <p>:</p>
+                <div class="caja-segundos">
+                  <p id="ampm" class="ampm">AM</p>
+                  <p id="segundos" class="segundos">11</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <script type="text/javascript">
+          <script type="text/javascript">
 
-        </script>
-      </body>
-    </html>
+          </script>
+        </body>
+      </html>
 
+    </div>
     <br>
     <h6 style="text-align:right; color:grey;">2.47</h6>
     <!--<script type="text/javascript">
